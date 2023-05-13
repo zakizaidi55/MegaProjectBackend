@@ -4,7 +4,7 @@ const Profile = require("../models/Profile");
 const otpGenerator = require("otp-generator");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
-require("dotenv");
+require("dotenv").config();
 
 // send OTP
 exports.sendOTP = async (req,res) => {
@@ -198,7 +198,7 @@ exports.login = async (req, res) => {
             const payload = {
                 email:user.email,
                 id:user._id,
-                role:user.role,
+                accountType :user.accountType,
             }
             const token = jwt.sign(payload, process.env.JWT_SECRET, {
                 expiresIn:"2h",
