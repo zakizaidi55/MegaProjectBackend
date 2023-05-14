@@ -240,9 +240,8 @@ exports.login = async (req, res) => {
 
 exports.changePassword=async(req,res)=>{
     try{
-          //fetch data
-            const {
-            email,oldpassword,newPassword,confirmPassword,}=req.body;
+        //fetch data
+        const {email,oldpassword,newPassword,confirmPassword,}=req.body;
 
         //validation
         if(!email || !oldpassword || !newPassword || !confirmPassword){
@@ -261,7 +260,7 @@ exports.changePassword=async(req,res)=>{
             })
         }
 
-        const updatePassword=await User.findOneAndUpdate({email},{
+        const updatePassword = await User.findOneAndUpdate({email},{
             password:newPassword,
         })
 
