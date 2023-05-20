@@ -69,7 +69,7 @@ exports.isInstructor = async (req, res, next) => {
             message:"User role is not defined",
         })
     }
-}
+};
 
 // isAdmin
 
@@ -85,7 +85,7 @@ exports.isAdmin = async (req, res, next) => {
     } catch(error) {
         return res.status(500).json( {
             succes:false,
-            message:"User role is not defined",
+            message:"User role cannot be verified, please try again",
         })
     }
-}
+};
