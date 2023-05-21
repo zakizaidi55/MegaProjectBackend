@@ -1,5 +1,5 @@
 const Course = require("../models/Course");
-const Tag = require("../models/Tags");
+const Tag = require("../models/Category");
 const User = require("../models/User");
 const {uploadImageToCloudinary} = require("../utils/imageUploader");
 
@@ -89,13 +89,9 @@ exports.createCourse = async (req, res) => {
     }
 };
 
-
-
-
-
 //getAllCourses handler function
 
-exports.showAllCourses = async (req, res) => {
+exports.getAllCourses = async (req, res) => {
     try {
             //TODO: change the below statement incrementally
             const allCourses = await Course.find({});

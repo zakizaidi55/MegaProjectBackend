@@ -69,7 +69,7 @@ exports.isInstructor = async (req, res, next) => {
             message:"User role is not defined",
         })
     }
-};
+}
 
 // isAdmin
 

@@ -51,7 +51,7 @@ exports.createSection = async (req,res) => {
 
 }
 
-exports.updateSecton = async (req, res) => {
+exports.updateSection = async (req, res) => {
     try {
 
         // data input
